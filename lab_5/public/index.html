@@ -1,0 +1,51 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function clicker_for_id(event){
+        event.preventDefault();
+        var numb = document.querySelector('id').value;
+        var reportit = document.querySelector("#reportit");
+        fetch("/api/"+ numb).then((res) => {
+        return res.json();
+        }).then((ProcessedResponse) => {
+          console.log(ProcessedResponse);
+          if(ProcessedResponse.error){
+            reportit.innerHTML = ProcessedResponse.error;
+          }else{
+            reportit.innerHTML = ProcessedResponse.name;
+          }
+        });
+      }
+      function clicker_for_name(event){
+        event.preventDefault();
+        var pname = document.querySelector('name').value;
+        var reportit = document.querySelector("#reportit");
+        fetch("/name/"+ pname).then((res) => {
+        return res.json();
+        }).then((ProcessedResponse) => {
+          console.log(ProcessedResponse);
+          if(ProcessedResponse.error){
+            reportit.innerHTML = ProcessedResponse.error;
+          }else{
+            reportit.innerHTML = ProcessedResponse.name + " is ID: " + ProcessedResponse.id;
+          }
+        });
+      }
+    </script>
+    <form onsubmit="clicker_for_id(event);" id="form_for_id">
+      <input type="text" id="id" name="id"><br>
+      <button type="submit">I Choose You!</button>
+    </form>
+    <form onsubmit="clicker_for_name(event);" id="form_for_name">
+      <input type="text" id="name" name="name"><br>
+      <button type="submit">I Choose You!</button>
+    </form>
+    <div id="reportit">
+    </div>
+  </body>
+</html>
