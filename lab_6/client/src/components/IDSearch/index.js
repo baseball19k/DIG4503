@@ -1,11 +1,12 @@
 import React from "react";
 
 class IDSearch extends React.Component {
-  readId(){
+
+  readId(event){
         event.preventDefault();
-        var numb = document.querySelector('#id').value;
+        const numb = document.querySelector('#id').value;
         var reportit = document.querySelector("#reportit");
-        fetch("http://localhost:80/api/"+ numb).then((res) => {
+        fetch("http://localhost:80/id/"+ numb.value).then((res) => {
         return res.json();
         }).then((ProcessedResponse) => {
           console.log(ProcessedResponse);
@@ -19,8 +20,10 @@ class IDSearch extends React.Component {
   render(){
     return(
       <div>
-        <input type="text" id="id" name="id"><br>
-        <button type="submit">I Choose You!</button>
+          <form onSubmit={this.readId}>
+            <input type="text" id="id" name="id"><br/>
+            <button type="submit">I Choose You!</button>
+          </form>
       </div>
 
     );

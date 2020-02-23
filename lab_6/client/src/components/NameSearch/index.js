@@ -1,26 +1,29 @@
 import React from "react";
 
 class NameSearch extends React.Component {
-  readName(){
+
+  readName(event){
         event.preventDefault();
-        var pname = document.querySelector('#name').value;
+        const pname = document.querySelector('#name').value;
         var reportit = document.querySelector("#reportit");
-        fetch("http://localhost:80/name/"+ pname).then((res) => {
+        fetch("http://localhost:80/name/"+ pname.value).then((res) => {
         return res.json();
         }).then((ProcessedResponse) => {
           console.log(ProcessedResponse);
           if(ProcessedResponse.error){
             reportit.innerHTML = ProcessedResponse.error;
           }else{
-            reportit.innerHTML = ProcessedResponse.name + " is ID: " + ProcessedResponse.id;
+            reportit.innerHTML = ProcessedResponse.name;
           }
         });
       }
   render(){
     return(
       <div>
-          <input type="text" id="name" name="name"><br>
-          <button type="readName()">I Choose You!</button>
+          <form onSubmit={this.readName}>
+            <input type="text" id="name" name="name"><br>
+            <button type="readName()">I Choose You!</button>
+          </form>
       </div>
 
     );
