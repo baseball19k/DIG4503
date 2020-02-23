@@ -16,7 +16,7 @@ class IDSearch extends React.Component {
             reportit.innerHTML = ProcessedResponse.name;
           }
         });
-      }
+      };
   render(){
     return(
       <div>

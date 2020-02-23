@@ -28,7 +28,7 @@ App.get("/id/:id", (req, res) => {
           result = value;
         }
     });
-    res.json(value);
+    res.json(result);
 });
 
 App.listen(port, () => {

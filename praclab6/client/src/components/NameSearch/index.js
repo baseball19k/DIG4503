@@ -6,7 +6,7 @@ class NameSearch extends React.Component {
         event.preventDefault();
         const pname = document.querySelector('#name').value;
         var reportit = document.querySelector("#reportit");
-        fetch("http://localhost:80/name/"+ pname.value).then((res) => {
+        fetch("http://localhost:80/name/"+ pname.value.toLowerCase()).then((res) => {
         return res.json();
         }).then((ProcessedResponse) => {
           console.log(ProcessedResponse);
@@ -16,7 +16,7 @@ class NameSearch extends React.Component {
             reportit.innerHTML = ProcessedResponse.name;
           }
         });
-      }
+      };
   render(){
     return(
       <div>
