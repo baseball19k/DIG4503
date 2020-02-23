@@ -4,16 +4,16 @@ class IDSearch extends React.Component {
 
   readId(event){
         event.preventDefault();
-        const numb = document.querySelector('#id').value;
-        var reportit = document.querySelector("#reportingArea");
+        const numb = document.querySelector('#id');
+        var reportingArea = document.querySelector("#reportingArea");
         fetch("http://localhost:80/id/"+ numb.value).then((res) => {
         return res.json();
         }).then((ProcessedResponse) => {
           console.log(ProcessedResponse);
           if(ProcessedResponse.error){
-            reportit.innerHTML = ProcessedResponse.error;
+            reportingArea.innerHTML = ProcessedResponse.error;
           }else{
-            reportit.innerHTML = ProcessedResponse.name;
+            reportingArea.innerHTML = ProcessedResponse.name;
           }
         });
       };

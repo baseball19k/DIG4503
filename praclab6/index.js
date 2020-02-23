@@ -10,7 +10,7 @@ App.use(cors());
 App.use("/", Express.static("client/build"));
 
 App.get("/name/:name", (req, res) => {
-    let result = {"error": "That's not it chief."}
+    let result = {"error": "That's not it chief."};
 
     pokemons.forEach((value)=> {
         if(value.name == req.params.name) {
@@ -21,7 +21,7 @@ App.get("/name/:name", (req, res) => {
 });
 
 App.get("/id/:id", (req, res) => {
-  let result = {"error": "That's not it chief."}
+  let result = {"error": "That's not it chief."};
 
     pokemons.forEach((value)=> {
         if(value.id == req.params.id) {
