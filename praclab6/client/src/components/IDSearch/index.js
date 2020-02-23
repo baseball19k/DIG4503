@@ -5,7 +5,7 @@ class IDSearch extends React.Component {
   readId(event){
         event.preventDefault();
         const numb = document.querySelector('#id').value;
-        var reportit = document.querySelector("#reportit");
+        var reportit = document.querySelector("#reportingArea");
         fetch("http://localhost:80/id/"+ numb.value).then((res) => {
         return res.json();
         }).then((ProcessedResponse) => {
