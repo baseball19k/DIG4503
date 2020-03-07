@@ -16,6 +16,15 @@ App.get("/movies/title/:title", (req, res) => {
         res.json(result);
     });
 });
+App.get("/movies/year/:year", (req, res) => {
+    let result = {"error": "Negative try again."};
+    database.findYear(req.params.year).then((movie) => {
+      if(movie != null) {
+        result = movie;
+      }
+      res.json(result);
+    });
+});
 App.listen(port, () => {
     console.log("Server running!")
 });
