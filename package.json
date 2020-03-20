@@ -18,6 +18,9 @@
   "homepage": "https://github.com/baseball19k/DIG4503#readme",
   "dependencies": {
     "chalk": "^3.0.0",
-    "express": "^4.17.1"
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "json-pokemon": "^1.0.0"
   }
 }
