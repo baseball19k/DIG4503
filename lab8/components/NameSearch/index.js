@@ -18,9 +18,9 @@ class NameSearch extends React.Component {
   render(){
     return(
       <div>
-          <form onSubmit={this.readName}>
-            <input type="text" id="name"/><br/>
-            <button type="readName()">I Choose You!</button>
+          <form onSubmit={this.readType}>
+            <input type="text" id="type"/><br/>
+            <button type="readType()">I Choose You!</button>
           </form>
       </div>
 
@@ -28,4 +28,4 @@ class NameSearch extends React.Component {
   }
 }
 
-export default NameSearch;
+export default TypeSearch;
