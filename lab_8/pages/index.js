@@ -1,5 +1,5 @@
-import IDSearch from './components/IDSearch';
-import NameSearch from './components/NameSearch';
+import IDSearch from '../components/IDSearch/';
+import NameSearch from '../components/NameSearch/';
 
 class App extends React.Component {
   render(){

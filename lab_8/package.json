@@ -1,5 +1,5 @@
 {
-  "name": "lab8",
+  "name": "lab_8",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "json-pokemon": "^1.0.0"
+    "json-pokemon": "^1.0.0",
+    "next": "9.3.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   }
 }

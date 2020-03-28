@@ -1,0 +1,36 @@
+.top{
+  text-align: center;
+  grid-column: 3/5;
+  font-size: 42px;
+  text-shadow: 1px 1px #DB391C;
+  text-decoration: none;
+}
+.nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.type{
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.id{
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.name{
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.home{
+text-decoration: none;
+color: black;
+}
