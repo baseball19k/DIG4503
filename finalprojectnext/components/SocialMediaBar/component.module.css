@@ -1,0 +1,23 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: #EDEDED;
+    grid-gap: 10px;
+}
+.socialtitle{
+      grid-column: 1/7;
+      grid-template-columns: 2fr 2fr;
+      text-align: center;
+      padding: 10px;
+}
+.end{
+    grid-column: 1/7;
+    grid-template-columns: 2fr 2fr;
+    text-align: center;
+    padding: 10px;
+
+}
+.sociallinks{
+  color: white;
+  text-decoration: none;
+}

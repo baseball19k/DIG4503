@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: #EDEDED;
+    grid-gap: 10px;
+    font-family: 'Roboto Slab', ;
+    text-shadow: .65px .65px #000000;
+}
+.pic{
+  grid-column: 1/4;
+
+}
+.explanation{
+  grid-column: 4/7;
+  text-align: center;
+}
+.grid-item {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.39);
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
